@@ -1,0 +1,20 @@
+aid: jones-lang-lasalle
+url: https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/apis.yml
+apis:
+  - aid: jones-lang-lasalle:corrigo-rest-api
+    name: JLL Corrigo Enterprise REST API
+    tags:
+      - Facility Management
+      - Work Orders
+      - Commercial Real Estate
+      - Asset Management
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://am-ce98c.corrigo.com/api/v1
+    humanURL: https://developer.corrigo.com/
+    properties:
+      - url: https://developer.corrigo.com/
+        type: Documentation
+      - url: openapi/jones-lang-lasalle-corrigo-rest-api-openapi.yml
+        type: OpenAPI
+    description: >-
+      The JLL Corrigo Enterprise REST API provides programmatic access to JLL Technologies' cloud-based facility management platform. The API enables integration with work order management, asset tracking, procurement, billing, and vendor management systems. It supports partner connectivity for data exchange with third-party systems using RESTful endpoints and JSON payloads.
