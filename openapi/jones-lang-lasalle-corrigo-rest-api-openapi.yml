@@ -1,0 +1,148 @@
+openapi: 3.1.0
+info:
+  title: JLL Corrigo Enterprise REST API
+  description: >-
+    The JLL Corrigo Enterprise REST API provides programmatic access to JLL
+    Technologies' cloud-based facility management platform. The API enables
+    integration with work order management, asset tracking, procurement,
+    billing, and vendor management systems.
+  version: '1.0'
+servers:
+  - url: https://am-ce98c.corrigo.com/api/v1
+tags:
+  - name: Work Orders
+    description: Create and manage work orders for facility maintenance.
+  - name: Assets
+    description: Track and manage facility assets and equipment.
+  - name: Contacts
+    description: Manage contacts including vendors and tenants.
+  - name: Locations
+    description: Manage building and space locations.
+paths:
+  /query/WorkOrder:
+    post:
+      operationId: queryWorkOrders
+      summary: Query work orders
+      description: >-
+        Retrieves a filtered list of work orders from the Corrigo Enterprise
+        platform based on specified query criteria.
+      tags:
+        - Work Orders
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: string
+                orderBy:
+                  type: string
+                top:
+                  type: integer
+      responses:
+        '200':
+          description: Success
+  /command/WorkOrder:
+    post:
+      operationId: createWorkOrder
+      summary: Create a work order
+      description: >-
+        Creates a new work order in the Corrigo Enterprise system for
+        facility maintenance or service requests.
+      tags:
+        - Work Orders
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                entity:
+                  type: object
+                  properties:
+                    TypeCategory:
+                      type: string
+                    PriorityId:
+                      type: integer
+                    Description:
+                      type: string
+      responses:
+        '200':
+          description: Work order created successfully
+  /query/Asset:
+    post:
+      operationId: queryAssets
+      summary: Query assets
+      description: >-
+        Retrieves a filtered list of assets from the Corrigo Enterprise
+        platform based on specified query criteria.
+      tags:
+        - Assets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: string
+                top:
+                  type: integer
+      responses:
+        '200':
+          description: Success
+  /query/Contact:
+    post:
+      operationId: queryContacts
+      summary: Query contacts
+      description: >-
+        Retrieves a filtered list of contacts including vendors, tenants,
+        and facility managers.
+      tags:
+        - Contacts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: string
+                top:
+                  type: integer
+      responses:
+        '200':
+          description: Success
+  /query/Location:
+    post:
+      operationId: queryLocations
+      summary: Query locations
+      description: >-
+        Retrieves a filtered list of building and space locations managed
+        within the Corrigo Enterprise platform.
+      tags:
+        - Locations
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: string
+                top:
+                  type: integer
+      responses:
+        '200':
+          description: Success
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
