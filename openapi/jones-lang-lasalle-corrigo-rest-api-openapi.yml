@@ -10,14 +10,14 @@ info:
 servers:
   - url: https://am-ce98c.corrigo.com/api/v1
 tags:
-  - name: Work Orders
-    description: Create and manage work orders for facility maintenance.
   - name: Assets
     description: Track and manage facility assets and equipment.
   - name: Contacts
     description: Manage contacts including vendors and tenants.
   - name: Locations
     description: Manage building and space locations.
+  - name: Work Orders
+    description: Create and manage work orders for facility maintenance.
 paths:
   /query/WorkOrder:
     post:

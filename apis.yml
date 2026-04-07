@@ -1,16 +1,14 @@
 aid: jones-lang-lasalle
-url: 
-  https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/apis.yml
 apis:
   - aid: jones-lang-lasalle:corrigo-rest-api
     name: JLL Corrigo Enterprise REST API
     tags:
+      - Asset Management
+      - Commercial Real Estate
       - Facility Management
       - Work Orders
-      - Commercial Real Estate
-      - Asset Management
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://am-ce98c.corrigo.com/api/v1
     humanURL: https://developer.corrigo.com/
     properties:
