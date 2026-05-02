@@ -13,7 +13,7 @@ Jones Lang LaSalle Incorporated (JLL) is a global commercial real estate service
 
 ## Timestamps
 - **Created:** 2026-03-21
-- **Modified:** 2026-03-21
+- **Modified:** 2026-04-28
 
 ## APIs
 
@@ -34,5 +34,5 @@ The JLL Corrigo Enterprise REST API provides programmatic access to JLL Technolo
 - [Website](https://www.jll.com/)
 
 ## Maintainers
-**FN:** API Evangelist
-**Email:** info@apievangelist.com
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com

@@ -1,5 +1,16 @@
 aid: jones-lang-lasalle
+name: Jones Lang LaSalle
 url: https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/apis.yml
+type: Index
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Commercial Real Estate
+  - Facility Management
+  - Asset Management
+  - Work Orders
+created: '2026-03-21'
+modified: '2026-04-28'
+specificationVersion: '0.19'
 apis:
   - aid: jones-lang-lasalle:corrigo-rest-api
     name: JLL Corrigo Enterprise REST API
@@ -22,7 +33,18 @@ apis:
       order management, asset tracking, procurement, billing, and vendor management
       systems. It supports partner connectivity for data exchange with third-party
       systems using RESTful endpoints and JSON payloads.
+common:
+  - type: Website
+    url: https://www.jll.com/
+  - type: Developer
+    url: https://developer.corrigo.com/
 description: >-
-  Welcome to the Corrigo Developer Network home page. You'll find comprehensive guides
-  and documentation for REST API services to help you start working with Corrigo Enterprise
-  as quickly as possible, as well as support if you get stuck.
+  Jones Lang LaSalle Incorporated (JLL) is a global commercial real estate services
+  company offering investment management, property management, and facility services.
+  Through JLL Technologies (JLLT), the company delivers technology solutions including
+  the Corrigo Enterprise platform for facility management with a REST API enabling
+  integration with work order management, asset tracking, procurement, billing, and
+  vendor management systems.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
