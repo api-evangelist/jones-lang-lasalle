@@ -1,0 +1,80 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: JLL Corrigo Enterprise REST API — Contacts
+  description: 'JLL Corrigo Enterprise REST API — Contacts. 1 operations. Lead operation: Query contacts. Self-contained Naftiko
+    capability covering one Jones Lang Lasalle business surface.'
+  tags:
+  - Jones Lang Lasalle
+  - Contacts
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    JONES_LANG_LASALLE_API_KEY: JONES_LANG_LASALLE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: corrigo-rest-contacts
+    baseUri: https://am-ce98c.corrigo.com/api/v1
+    description: JLL Corrigo Enterprise REST API — Contacts business capability. Self-contained, no shared references.
+    resources:
+    - name: query-Contact
+      path: /query/Contact
+      operations:
+      - name: querycontacts
+        method: POST
+        description: Query contacts
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.JONES_LANG_LASALLE_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: corrigo-rest-contacts-rest
+    port: 8080
+    description: REST adapter for JLL Corrigo Enterprise REST API — Contacts. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/query/contact
+      name: query-contact
+      description: REST surface for query-Contact.
+      operations:
+      - method: POST
+        name: querycontacts
+        description: Query contacts
+        call: corrigo-rest-contacts.querycontacts
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: corrigo-rest-contacts-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for JLL Corrigo Enterprise REST API — Contacts. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: query-contacts
+      description: Query contacts
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: corrigo-rest-contacts.querycontacts
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

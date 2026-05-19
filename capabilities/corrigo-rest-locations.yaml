@@ -1,0 +1,80 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: JLL Corrigo Enterprise REST API — Locations
+  description: 'JLL Corrigo Enterprise REST API — Locations. 1 operations. Lead operation: Query locations. Self-contained
+    Naftiko capability covering one Jones Lang Lasalle business surface.'
+  tags:
+  - Jones Lang Lasalle
+  - Locations
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    JONES_LANG_LASALLE_API_KEY: JONES_LANG_LASALLE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: corrigo-rest-locations
+    baseUri: https://am-ce98c.corrigo.com/api/v1
+    description: JLL Corrigo Enterprise REST API — Locations business capability. Self-contained, no shared references.
+    resources:
+    - name: query-Location
+      path: /query/Location
+      operations:
+      - name: querylocations
+        method: POST
+        description: Query locations
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.JONES_LANG_LASALLE_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: corrigo-rest-locations-rest
+    port: 8080
+    description: REST adapter for JLL Corrigo Enterprise REST API — Locations. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/query/location
+      name: query-location
+      description: REST surface for query-Location.
+      operations:
+      - method: POST
+        name: querylocations
+        description: Query locations
+        call: corrigo-rest-locations.querylocations
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: corrigo-rest-locations-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for JLL Corrigo Enterprise REST API — Locations. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: query-locations
+      description: Query locations
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: corrigo-rest-locations.querylocations
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

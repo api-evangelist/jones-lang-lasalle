@@ -1,0 +1,122 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: JLL Corrigo Enterprise REST API — Work Orders
+  description: 'JLL Corrigo Enterprise REST API — Work Orders. 2 operations. Lead operation: Create a work order. Self-contained
+    Naftiko capability covering one Jones Lang Lasalle business surface.'
+  tags:
+  - Jones Lang Lasalle
+  - Work Orders
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    JONES_LANG_LASALLE_API_KEY: JONES_LANG_LASALLE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: corrigo-rest-work-orders
+    baseUri: https://am-ce98c.corrigo.com/api/v1
+    description: JLL Corrigo Enterprise REST API — Work Orders business capability. Self-contained, no shared references.
+    resources:
+    - name: command-WorkOrder
+      path: /command/WorkOrder
+      operations:
+      - name: createworkorder
+        method: POST
+        description: Create a work order
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: query-WorkOrder
+      path: /query/WorkOrder
+      operations:
+      - name: queryworkorders
+        method: POST
+        description: Query work orders
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.JONES_LANG_LASALLE_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: corrigo-rest-work-orders-rest
+    port: 8080
+    description: REST adapter for JLL Corrigo Enterprise REST API — Work Orders. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/command/workorder
+      name: command-workorder
+      description: REST surface for command-WorkOrder.
+      operations:
+      - method: POST
+        name: createworkorder
+        description: Create a work order
+        call: corrigo-rest-work-orders.createworkorder
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/query/workorder
+      name: query-workorder
+      description: REST surface for query-WorkOrder.
+      operations:
+      - method: POST
+        name: queryworkorders
+        description: Query work orders
+        call: corrigo-rest-work-orders.queryworkorders
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: corrigo-rest-work-orders-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for JLL Corrigo Enterprise REST API — Work Orders. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: create-work-order
+      description: Create a work order
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: corrigo-rest-work-orders.createworkorder
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: query-work-orders
+      description: Query work orders
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: corrigo-rest-work-orders.queryworkorders
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
