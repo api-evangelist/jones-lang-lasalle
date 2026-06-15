@@ -1,0 +1,117 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "JLL Corrigo Enterprise REST API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Work Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Query work orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://am-ce98c.corrigo.com/api/v1/query/WorkOrder",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieves a filtered list of work orders from the Corrigo Enterprise platform based on specified query criteria."
+        },
+        {
+          "info": {
+            "name": "Create a work order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://am-ce98c.corrigo.com/api/v1/command/WorkOrder",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new work order in the Corrigo Enterprise system for facility maintenance or service requests."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Assets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Query assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://am-ce98c.corrigo.com/api/v1/query/Asset",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieves a filtered list of assets from the Corrigo Enterprise platform based on specified query criteria."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Contacts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Query contacts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://am-ce98c.corrigo.com/api/v1/query/Contact",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieves a filtered list of contacts including vendors, tenants, and facility managers."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Locations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Query locations",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://am-ce98c.corrigo.com/api/v1/query/Location",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieves a filtered list of building and space locations managed within the Corrigo Enterprise platform."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

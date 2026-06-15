@@ -1,0 +1,480 @@
+{
+  "item": [
+    {
+      "id": "72574f4f-be3f-4370-ab4c-bd98e53f0d25",
+      "name": "Assets",
+      "description": {
+        "content": "Track and manage facility assets and equipment.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d12a9b23-31b2-423b-97b4-edbc1c130269",
+          "name": "Query assets",
+          "request": {
+            "name": "Query assets",
+            "description": {
+              "content": "Retrieves a filtered list of assets from the Corrigo Enterprise platform based on specified query criteria.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "query",
+                "Asset"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": \"<string>\",\n  \"top\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "49f8c7ed-cdba-4864-8570-d8065bca2631",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "query",
+                    "Asset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": \"<string>\",\n  \"top\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "4d3a316a-3aba-4930-92df-d048198aee1f",
+      "name": "Contacts",
+      "description": {
+        "content": "Manage contacts including vendors and tenants.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "710af953-5b9d-4017-993a-4f6fa87f4521",
+          "name": "Query contacts",
+          "request": {
+            "name": "Query contacts",
+            "description": {
+              "content": "Retrieves a filtered list of contacts including vendors, tenants, and facility managers.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "query",
+                "Contact"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": \"<string>\",\n  \"top\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "64180f95-99ec-4611-9b36-6cf4c175f07a",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "query",
+                    "Contact"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": \"<string>\",\n  \"top\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "9934be57-0eca-4e3e-82be-35fa6854cac5",
+      "name": "Locations",
+      "description": {
+        "content": "Manage building and space locations.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b1251c59-9aa2-40d9-a431-9dc925c0ae29",
+          "name": "Query locations",
+          "request": {
+            "name": "Query locations",
+            "description": {
+              "content": "Retrieves a filtered list of building and space locations managed within the Corrigo Enterprise platform.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "query",
+                "Location"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": \"<string>\",\n  \"top\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "85c64d24-30d0-448c-a23a-7001570850a0",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "query",
+                    "Location"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": \"<string>\",\n  \"top\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "025967bf-63f1-4dce-8e01-eb5e6dbc0c9d",
+      "name": "Work Orders",
+      "description": {
+        "content": "Create and manage work orders for facility maintenance.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4d1d97e3-9578-4eb8-95a4-5aa1f6aee338",
+          "name": "Query work orders",
+          "request": {
+            "name": "Query work orders",
+            "description": {
+              "content": "Retrieves a filtered list of work orders from the Corrigo Enterprise platform based on specified query criteria.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "query",
+                "WorkOrder"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": \"<string>\",\n  \"orderBy\": \"<string>\",\n  \"top\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "738a1da0-5dbf-4e8d-beba-deca261db7f4",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "query",
+                    "WorkOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": \"<string>\",\n  \"orderBy\": \"<string>\",\n  \"top\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "36df1764-49af-4396-9ba7-8adac0c32fa4",
+          "name": "Create a work order",
+          "request": {
+            "name": "Create a work order",
+            "description": {
+              "content": "Creates a new work order in the Corrigo Enterprise system for facility maintenance or service requests.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "command",
+                "WorkOrder"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entity\": {\n    \"TypeCategory\": \"<string>\",\n    \"PriorityId\": \"<integer>\",\n    \"Description\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e852738a-7f21-42f7-b2e7-9fdc69b4f1e9",
+              "name": "Work order created successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "command",
+                    "WorkOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"entity\": {\n    \"TypeCategory\": \"<string>\",\n    \"PriorityId\": \"<integer>\",\n    \"Description\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://am-ce98c.corrigo.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "451eec18-6ef5-426b-8d6b-afecf0aff85e",
+    "name": "JLL Corrigo Enterprise REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The JLL Corrigo Enterprise REST API provides programmatic access to JLL Technologies' cloud-based facility management platform. The API enables integration with work order management, asset tracking, procurement, billing, and vendor management systems.",
+      "type": "text/plain"
+    }
+  }
+}
