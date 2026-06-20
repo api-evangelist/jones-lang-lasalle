@@ -2,7 +2,7 @@ aid: jones-lang-lasalle
 name: Jones Lang LaSalle
 url: https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/apis.yml
 type: Index
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Commercial Real Estate
   - Facility Management
@@ -20,7 +20,7 @@ apis:
       - Commercial Real Estate
       - Facility Management
       - Work Orders
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://am-ce98c.corrigo.com/api/v1
     humanURL: https://developer.corrigo.com/
     properties:
