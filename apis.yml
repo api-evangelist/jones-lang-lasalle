@@ -34,6 +34,8 @@ apis:
       and vendor management systems. It supports partner connectivity for data exchange with third-party systems using
       RESTful endpoints and JSON payloads.
 common:
+  - type: AgenticAccess
+    url: agentic-access/jones-lang-lasalle-agentic-access.yml
   - type: DomainSecurity
     url: security/jones-lang-lasalle-domain-security.yml
   - type: Authentication
