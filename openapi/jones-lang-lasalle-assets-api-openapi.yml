@@ -1,0 +1,37 @@
+openapi: 3.1.0
+info:
+  title: JLL Corrigo Enterprise REST Assets API
+  description: The JLL Corrigo Enterprise REST API provides programmatic access to JLL Technologies' cloud-based facility management platform. The API enables integration with work order management, asset tracking, procurement, billing, and vendor management systems.
+  version: '1.0'
+servers:
+- url: https://am-ce98c.corrigo.com/api/v1
+tags:
+- name: Assets
+  description: Track and manage facility assets and equipment.
+paths:
+  /query/Asset:
+    post:
+      operationId: queryAssets
+      summary: Query assets
+      description: Retrieves a filtered list of assets from the Corrigo Enterprise platform based on specified query criteria.
+      tags:
+      - Assets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: string
+                top:
+                  type: integer
+      responses:
+        '200':
+          description: Success
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
