@@ -2,7 +2,20 @@ aid: jones-lang-lasalle
 name: Jones Lang LaSalle
 url: https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/apis.yml
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: enterprise
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jones-lang-lasalle.png
 tags:
   - Commercial Real Estate
   - Facility Management
@@ -13,26 +26,54 @@ created: '2026-03-21'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: jones-lang-lasalle:corrigo-rest-api
-    name: JLL Corrigo Enterprise REST API
-    tags:
-      - Asset Management
-      - Commercial Real Estate
-      - Facility Management
-      - Work Orders
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://am-ce98c.corrigo.com/api/v1
-    humanURL: https://developer.corrigo.com/
-    properties:
-      - url: https://developer.corrigo.com/
-        type: Documentation
-      - url: openapi/jones-lang-lasalle-corrigo-rest-api-openapi.yml
-        type: OpenAPI
-    description: >-
-      The JLL Corrigo Enterprise REST API provides programmatic access to JLL Technologies' cloud-based facility
-      management platform. The API enables integration with work order management, asset tracking, procurement, billing,
-      and vendor management systems. It supports partner connectivity for data exchange with third-party systems using
-      RESTful endpoints and JSON payloads.
+- aid: jones-lang-lasalle:jones-lang-lasalle-assets-api
+  name: Jones Lang LaSalle Assets API
+  description: Track and manage facility assets and equipment.
+  humanURL: https://developer.corrigo.com/
+  baseURL: https://am-ce98c.corrigo.com/api/v1
+  tags:
+  - Assets
+  properties:
+  - type: OpenAPI
+    url: openapi/jones-lang-lasalle-assets-api-openapi.yml
+  - type: Documentation
+    url: https://developer.corrigo.com/
+- aid: jones-lang-lasalle:jones-lang-lasalle-contacts-api
+  name: Jones Lang LaSalle Contacts API
+  description: Manage contacts including vendors and tenants.
+  humanURL: https://developer.corrigo.com/
+  baseURL: https://am-ce98c.corrigo.com/api/v1
+  tags:
+  - Contacts
+  properties:
+  - type: OpenAPI
+    url: openapi/jones-lang-lasalle-contacts-api-openapi.yml
+  - type: Documentation
+    url: https://developer.corrigo.com/
+- aid: jones-lang-lasalle:jones-lang-lasalle-locations-api
+  name: Jones Lang LaSalle Locations API
+  description: Manage building and space locations.
+  humanURL: https://developer.corrigo.com/
+  baseURL: https://am-ce98c.corrigo.com/api/v1
+  tags:
+  - Locations
+  properties:
+  - type: OpenAPI
+    url: openapi/jones-lang-lasalle-locations-api-openapi.yml
+  - type: Documentation
+    url: https://developer.corrigo.com/
+- aid: jones-lang-lasalle:jones-lang-lasalle-work-orders-api
+  name: Jones Lang LaSalle Work Orders API
+  description: Create and manage work orders for facility maintenance.
+  humanURL: https://developer.corrigo.com/
+  baseURL: https://am-ce98c.corrigo.com/api/v1
+  tags:
+  - Work Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/jones-lang-lasalle-work-orders-api-openapi.yml
+  - type: Documentation
+    url: https://developer.corrigo.com/
 common:
   - type: AgenticAccess
     url: agentic-access/jones-lang-lasalle-agentic-access.yml
