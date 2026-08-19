@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "JLL Corrigo Enterprise REST Assets Locations API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Locations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Query locations",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://am-ce98c.corrigo.com/api/v1/query/Location",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieves a filtered list of building and space locations managed within the Corrigo Enterprise platform."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

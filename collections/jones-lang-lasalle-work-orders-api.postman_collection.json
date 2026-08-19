@@ -1,0 +1,198 @@
+{
+  "item": [
+    {
+      "id": "40477728-9d78-4328-9f1d-ad432bb17512",
+      "name": "Work Orders",
+      "description": {
+        "content": "Create and manage work orders for facility maintenance.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "eab9800d-94c9-4479-9140-6bfbf73d2902",
+          "name": "Query work orders",
+          "request": {
+            "name": "Query work orders",
+            "description": {
+              "content": "Retrieves a filtered list of work orders from the Corrigo Enterprise platform based on specified query criteria.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "query",
+                "WorkOrder"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": \"<string>\",\n  \"orderBy\": \"<string>\",\n  \"top\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4afcb357-ca6e-4957-aa18-224d3e127f0d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "query",
+                    "WorkOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": \"<string>\",\n  \"orderBy\": \"<string>\",\n  \"top\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2b1e3488-7dbc-492f-94df-0763e074186c",
+          "name": "Create a work order",
+          "request": {
+            "name": "Create a work order",
+            "description": {
+              "content": "Creates a new work order in the Corrigo Enterprise system for facility maintenance or service requests.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "command",
+                "WorkOrder"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entity\": {\n    \"TypeCategory\": \"<string>\",\n    \"PriorityId\": \"<integer>\",\n    \"Description\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "03b4d074-fd80-45bd-a1fb-00318ff3a293",
+              "name": "Work order created successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "command",
+                    "WorkOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"entity\": {\n    \"TypeCategory\": \"<string>\",\n    \"PriorityId\": \"<integer>\",\n    \"Description\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://am-ce98c.corrigo.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "127a073d-fb1d-4a01-b879-ee5cc8b749e9",
+    "name": "JLL Corrigo Enterprise REST Assets Work Orders API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The JLL Corrigo Enterprise REST API provides programmatic access to JLL Technologies' cloud-based facility management platform. The API enables integration with work order management, asset tracking, procurement, billing, and vendor management systems.",
+      "type": "text/plain"
+    }
+  }
+}

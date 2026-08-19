@@ -1,0 +1,115 @@
+{
+  "item": [
+    {
+      "id": "a5128398-701f-4ba2-b997-e27b04e6fbcc",
+      "name": "Assets",
+      "description": {
+        "content": "Track and manage facility assets and equipment.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9161d7ba-2bd7-4941-8eee-68e885798bf8",
+          "name": "Query assets",
+          "request": {
+            "name": "Query assets",
+            "description": {
+              "content": "Retrieves a filtered list of assets from the Corrigo Enterprise platform based on specified query criteria.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "query",
+                "Asset"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": \"<string>\",\n  \"top\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "778da557-d4dc-4089-908b-4afddce5fae9",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "query",
+                    "Asset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": \"<string>\",\n  \"top\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://am-ce98c.corrigo.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "cfe54c16-69cb-432c-94ff-4f5e94d82741",
+    "name": "JLL Corrigo Enterprise REST Assets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The JLL Corrigo Enterprise REST API provides programmatic access to JLL Technologies' cloud-based facility management platform. The API enables integration with work order management, asset tracking, procurement, billing, and vendor management systems.",
+      "type": "text/plain"
+    }
+  }
+}
