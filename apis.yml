@@ -24,7 +24,7 @@ tags:
   - Fortune 500
 created: '2026-03-21'
 modified: '2026-05-19'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: jones-lang-lasalle:jones-lang-lasalle-assets-api
   name: Jones Lang LaSalle Assets API
