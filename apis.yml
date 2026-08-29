@@ -86,6 +86,9 @@ apis:
   - type: Documentation
     url: https://developer.corrigo.com/
 common:
+  - type: CapabilityMap
+    url: capabilities/jones-lang-lasalle-capability-edges.yml
+    name: Jones Lang LaSalle Business Capability Map
   - type: AgenticAccess
     url: agentic-access/jones-lang-lasalle-agentic-access.yml
   - type: DomainSecurity
