@@ -68,6 +68,8 @@ apis:
   humanURL: https://developer.corrigo.com/
   baseURL: https://am-ce98c.corrigo.com/api/v1
   tags:
+  - Location
+  tags_raw:
   - Locations
   properties:
   - type: OpenAPI
