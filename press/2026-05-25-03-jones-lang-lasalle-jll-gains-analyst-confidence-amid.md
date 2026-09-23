@@ -1,7 +1,9 @@
 ---
 title: Jones Lang LaSalle (JLL) Gains Analyst Confidence Amid ...
 url: https://finance.yahoo.com/news/jones-lang-lasalle-jll-gains-134305389.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Jones Lang LaSalle" press release artificial intelligence'
 position: 3
 source: serpapi-google

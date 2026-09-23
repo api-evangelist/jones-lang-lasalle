@@ -1,10 +1,7 @@
 {
   "provider": "jones-lang-lasalle",
   "sources": [
-    "jones-lang-lasalle-assets-api-openapi.yml",
-    "jones-lang-lasalle-contacts-api-openapi.yml",
-    "jones-lang-lasalle-locations-api-openapi.yml",
-    "jones-lang-lasalle-work-orders-api-openapi.yml"
+    "_original/jones-lang-lasalle-corrigo-rest-api-openapi.yml"
   ],
   "outputs": [
     "jones-lang-lasalle-assets-api-openapi.yml",
@@ -15,6 +12,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "jones-lang-lasalle-corrigo-rest-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "jones-lang-lasalle-assets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jones-lang-lasalle-contacts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jones-lang-lasalle-locations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jones-lang-lasalle-work-orders-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

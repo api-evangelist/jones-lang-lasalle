@@ -1,7 +1,9 @@
 ---
 title: JLL unveils first GPT model for commercial real estate
 url: https://www.prnewswire.com/news-releases/jll-unveils-first-gpt-model-for-commercial-real-estate-301890405.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Jones Lang LaSalle" press release artificial intelligence'
 position: 4
 source: serpapi-google
