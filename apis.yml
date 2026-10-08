@@ -89,6 +89,12 @@ apis:
   - type: Documentation
     url: https://developer.corrigo.com/
 common:
+  - type: Plans
+    url: plans/jones-lang-lasalle-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/jones-lang-lasalle-rate-limits.yml
+  - type: FinOps
+    url: finops/jones-lang-lasalle-finops.yml
   - url: https://www.jll.com/en-us/newsroom
     type: Blog
   - type: CapabilityMap
