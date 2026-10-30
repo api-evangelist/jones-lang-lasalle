@@ -1,4 +1,4 @@
-# Jones Lang LaSalle (jones-lang-lasalle)
+# Jones Lang LaSalle
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,55 +66,121 @@
 
 Jones Lang LaSalle Incorporated (JLL) is a global commercial real estate services company offering investment management, property management, and facility services. Through JLL Technologies (JLLT), the company delivers technology solutions including the Corrigo Enterprise platform for facility management with a REST API enabling integration with work order management, asset tracking, procurement, billing, and vendor management systems.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/jones-lang-lasalle/refs/heads/main/apis.yml)
+**Areas:** Commercial Real Estate · Facility Management · Asset Management · Work Orders · Fortune 500
 
-## Scope
+## Jones Lang LaSalle on APIs.io
 
-- **Type:** Index
+Everything profiled for Jones Lang LaSalle is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/jones-lang-lasalle/](https://apis.io/providers/jones-lang-lasalle/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- Commercial Real Estate
-- Facility Management
-- Asset Management
-- Work Orders
+- [Jones Lang LaSalle Assets API](https://apis.io/apis/jones-lang-lasalle/jones-lang-lasalle-assets-api/) — Track and manage facility assets and equipment.
+- [Jones Lang LaSalle Contacts API](https://apis.io/apis/jones-lang-lasalle/jones-lang-lasalle-contacts-api/) — Manage contacts including vendors and tenants.
+- [Jones Lang LaSalle Locations API](https://apis.io/apis/jones-lang-lasalle/jones-lang-lasalle-locations-api/) — Manage building and space locations.
+- [Jones Lang LaSalle Work Orders API](https://apis.io/apis/jones-lang-lasalle/jones-lang-lasalle-work-orders-api/) — Create and manage work orders for facility maintenance.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### JLL Corrigo Enterprise REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The JLL Corrigo Enterprise REST API provides programmatic access to JLL Technologies' cloud-based facility management platform. The API enables integration with work order management, asset tracking, procurement, billing, and vendor management systems. It supports partner connectivity for data exchange with third-party systems using RESTful endpoints and JSON payloads.
+- [Jones Lang Lasalle Agentic Access](https://apis.io/agentic-access/jones-lang-lasalle/jones-lang-lasalle-agentic-access/)
 
-- **Human URL:** [https://developer.corrigo.com/](https://developer.corrigo.com/)
-- **Base URL:** `https://am-ce98c.corrigo.com/api/v1`
+#### Collections (5)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Asset Management
-- Commercial Real Estate
-- Facility Management
-- Work Orders
+- [JLL Corrigo Enterprise REST Assets API](https://apis.io/collections/jones-lang-lasalle/open-jones-lang-lasalle-assets-api/)
+- [JLL Corrigo Enterprise REST Assets Contacts API](https://apis.io/collections/jones-lang-lasalle/open-jones-lang-lasalle-contacts-api/)
+- [JLL Corrigo Enterprise REST API](https://apis.io/collections/jones-lang-lasalle/open-jones-lang-lasalle-corrigo-rest-api/)
+- [JLL Corrigo Enterprise REST Assets Locations API](https://apis.io/collections/jones-lang-lasalle/open-jones-lang-lasalle-locations-api/)
+- [JLL Corrigo Enterprise REST Assets Work Orders API](https://apis.io/collections/jones-lang-lasalle/open-jones-lang-lasalle-work-orders-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://developer.corrigo.com/)
-- [OpenAPI](openapi/jones-lang-lasalle-corrigo-rest-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/jones-lang-lasalle-corrigo-rest-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/jones-lang-lasalle-corrigo-rest-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Jones Lang Lasalle Authentication](https://apis.io/security/jones-lang-lasalle/jones-lang-lasalle-authentication/)
+- [Jones Lang Lasalle Domain Security](https://apis.io/security/jones-lang-lasalle/jones-lang-lasalle-domain-security/)
 
-- [GitHub Organization](https://github.com/JLL-IT)
-- [LinkedIn](https://www.linkedin.com/company/jll)
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Jones Lang Lasalle Plans Pricing](https://apis.io/plans/jones-lang-lasalle/jones-lang-lasalle-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Jones Lang Lasalle Rate Limits](https://apis.io/rate-limits/jones-lang-lasalle/jones-lang-lasalle-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Jones Lang Lasalle Finops](https://apis.io/finops/jones-lang-lasalle/jones-lang-lasalle-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.jll.com/)
-- [Developer](https://developer.corrigo.com/)
+- [Blog](https://www.jll.com/en-us/newsroom)
+- [GitHub](https://github.com/JLL-IT)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 22.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 44.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 5.3 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/jones-lang-lasalle/](https://apis.io/providers/jones-lang-lasalle/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Jones Lang LaSalle: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/jones-lang-lasalle/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
